@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<section class="about-container">
+    <h2 class="section-title">About Nature's Delight</h2>
+    <div class="about-grid">
+        <div class="about-content">
+            <h2>Your Partner in Quality</h2>
+            <p>Nature's Delight International Trading has been a leader in the agricultural export industry for decades. We pride ourselves on sourcing the finest products directly from trusted suppliers.</p>
+            <p>Our mission is to deliver premium quality agricultural products to our customers worldwide, ensuring freshness, authenticity, and exceptional value.</p>
+
+            <div class="about-highlights">
+                <div *ngFor="let highlight of highlights" class="highlight">
+                    <div class="highlight-icon">{{ highlight.icon }}</div>
+                    <h3>{{ highlight.title }}</h3>
+                    <p>{{ highlight.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="about-image">
+            <div class="image-content">🌾</div>
+        </div>
+    </div>
+</section>

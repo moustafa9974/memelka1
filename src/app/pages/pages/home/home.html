@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Nature's Delight</h1>
+        <p>Explore our premium collection of agricultural products</p>
+
+        <!-- Product Categories List - Clickable Titles Only -->
+        <div class="categories-list">
+            <div *ngFor="let category of productCategories"
+                 class="category-item"
+                 (click)="navigateToProducts(category.categoryName)">
+                <div class="category-info">
+                    <h3 class="category-name">{{ category.categoryName }}</h3>
+                    <p class="category-count">{{ category.products.length }} products</p>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-images">
+        <div class="hero-image-item" (click)="navigateToProducts()">
+            <img src="Medjool Dates Punnet 450g.jpeg" alt="Dates" class="product-image" />
+            <span class="image-label">Dates</span>
+        </div>
+        <div class="hero-image-item" (click)="navigateToProducts()">
+            <img src="Chilli.jpeg" alt="Spices" class="product-image" />
+            <span class="image-label">Spices</span>
+        </div>
+        <div class="hero-image-item" (click)="navigateToProducts()">
+            <img src="WhiteBean.jpeg" alt="Beans" class="product-image" />
+            <span class="image-label">Beans</span>
+        </div>
+        <div class="hero-image-item" (click)="navigateToProducts()">
+            <img src="Yellow_potato.jpeg" alt="Fresh Produce" class="product-image" />
+            <span class="image-label">Fresh</span>
+        </div>
+    </div>
+</section>

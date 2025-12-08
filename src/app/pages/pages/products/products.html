@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<div class="products-page">
+  <!-- Page Title Section -->
+  <div class="page-header">
+    <h1>Our Premium Products</h1>
+    <p class="subtitle">Discover our complete range of quality agricultural products</p>
+  </div>
+
+  <!-- Products Display -->
+  <div class="products-wrapper">
+    <div *ngFor="let category of productCategories" class="category-section">
+      <!-- Category Header -->
+      <div class="category-header">
+
+        <h2 class="category-title">{{ category.categoryName }}</h2>
+        <div class="category-divider"></div>
+      </div>
+
+      <!-- Products List -->
+      <div class="products-list">
+        <div *ngFor="let product of category.products" class="product-item" (click)="onProductClick(product)">
+          <div class="product-image" *ngIf="product.image">
+            <img [src]="product.image" [alt]="product.name" />
+          </div>
+          <div class="product-left">
+
+            <div class="product-details">
+              <h3 class="product-name">{{ product.name }}</h3>
+              <p class="product-desc">{{ product.description }}</p>
+            </div>
+          </div>
+          <div class="product-right">
+            <span class="product-badge">{{ product.badge }}</span>
+            <button class="add-btn" (click)="onAddToCart(product.name); $event.stopPropagation()">
+              <i class="fas fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

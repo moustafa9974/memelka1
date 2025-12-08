@@ -1,0 +1,46 @@
+<!-- HEADER -->
+<div class="header">
+    <div class="header-left">
+        <div class="logo">
+            <img src="logo1.jpg" alt="Memelka Logo" class="logo-img" />
+        </div>
+        <div class="company-info">
+            <div class="company-name">Memelka Export</div>
+            <div class="company-tagline">International Trading</div>
+        </div>
+    </div>
+
+    <div class="header-middle">
+        <h2>Direct Expert and Trading Company</h2>
+    </div>
+
+    <div class="header-right">
+        <div class="contact-info">
+            <strong>📞 Contact Us</strong>
+            <span>+203 488 9820</span>
+            <span>office@orienteg.com</span>
+        </div>
+
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-links">
+        <a (click)="navigateTo('home')"
+           [class.active]="activeLink === 'home'"
+           class="nav-link">Home</a>
+        <span class="divider"></span>
+        <a (click)="navigateTo('products')"
+           [class.active]="activeLink === 'products'"
+           class="nav-link">Products</a>
+        <span class="divider"></span>
+        <a (click)="navigateTo('about')"
+           [class.active]="activeLink === 'about'"
+           class="nav-link">About Us</a>
+        <span class="divider"></span>
+        <a (click)="navigateTo('contact')"
+           [class.active]="activeLink === 'contact'"
+           class="nav-link">Contact</a>
+    </div>
+</nav>
