@@ -31,10 +31,10 @@ app-navbar div {
   font-family: 'Mulish', sans-serif;
 }
 
-/* Header Section */
+/* Header Section - All elements in one line */
 .header {
   background: var(--white);
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,331 +43,333 @@ app-navbar div {
   left: 0;
   right: 0;
   z-index: 999;
-  height: 90px;
+  height: 60px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Logo takes full height and more width */
 .header-left {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex: 0.25;
+  flex: 0 0 auto;
 }
 
 .logo {
-  height: 50px;
-  width: 50px;
+  height: 60px; /* Full header height */
+  width: 80px; /* Increased width for better visibility */
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-
+  border-radius: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
-  color: var(--white);
   overflow: hidden;
+  padding: 0;
 }
 
 .logo-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-
+   /* Add some padding so logo isn't touching edges */
 }
 
 .company-info {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  justify-content: center;
+  min-height: 60px;
 }
 
 .company-name {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   color: var(--primary-blue-darker);
   margin: 0;
+  line-height: 1.2;
 }
 
 .company-tagline {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0;
+  color: var(--primary-blue);
+  margin: 2px 0 0 0;
+  font-weight: 400;
 }
 
+/* Header middle - combined with Memelka Export */
 .header-middle {
   flex: 1;
   text-align: center;
   padding: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60px;
 }
 
-.header-middle h2 {
+.header-title {
+  font-size: 16px;
+  font-weight: 700;
   color: var(--primary-blue-darker);
-  font-size: 22px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 0;
-  font-weight: 600;
+  line-height: 1.2;
 }
 
+.header-subtitle {
+  font-size: 14px;
+  color: var(--text-dark);
+  margin: 4px 0 0 0;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Header right */
 .header-right {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  flex: 0.25;
+  gap: 1.5rem;
+  flex: 0 0 auto;
   justify-content: flex-end;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   color: var(--primary-blue-darker);
   font-size: 11px;
   text-align: right;
+  justify-content: center;
+  min-height: 60px;
 }
 
 .contact-info strong {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 2px;
 }
 
-.notification-icon {
-  position: relative;
-  cursor: pointer;
-  font-size: 20px;
-  color: var(--white);
-  transition: transform 0.2s ease;
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.notification-icon:hover {
-  transform: scale(1.15);
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-dark);
 }
 
-.notification-badge {
-  position: absolute;
-  top: 6px;
-  right: 4px;
-  height: 10px;
-  width: 10px;
-  background-color: #dc2626;
-  border-radius: 50%;
-  border: 2px solid var(--white);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+.contact-detail i {
+  font-style: normal;
 }
 
-/* Navbar Section - Professional Layout */
+/* Navbar Section */
 .navbar {
   font-family: 'Mulish', sans-serif !important;
-  background: linear-gradient(90deg, #0066cc 0%, #0052a3 100%) !important;
-  height: 50px;
+  background: var(--primary-blue-darker);
+  height: 42px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 0 2rem;
   position: fixed;
-  top: 90px;
+  top: 60px; /* Adjusted to match new header height */
   left: 0;
   right: 0;
   width: 100%;
   z-index: 998;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
 }
 
 .nav-link {
   color: var(--white);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
-  padding: 0 10px;
+  padding: 0 8px;
   transition: color 0.3s ease;
   cursor: pointer;
   border: none;
   background: none;
+  height: 42px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--accent-gold);
 }
 
 .nav-link.active {
-  background: linear-gradient(90deg, var(--accent-gold-dark), var(--accent-gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-gold);
   font-weight: 700;
 }
 
 .divider {
-  height: 30px;
+  height: 25px;
   width: 1px;
   background-color: rgba(255, 255, 255, 0.3);
-}
-
-.notification-container {
-  position: relative;
-  margin-left: auto;
-}
-
-.notification-circle {
-  position: absolute;
-  top: 30px;
-  right: -10px;
-  background: var(--white);
-  border-radius: 50%;
-  height: 45px;
-  width: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.notification-circle i {
-  font-size: 20px;
-  color: var(--primary-blue);
-  cursor: pointer;
-}
-
-.notif-badge {
-  position: absolute;
-  top: 6px;
-  right: 4px;
-  height: 10px;
-  width: 10px;
-  background-color: red;
-  border-radius: 50%;
-  border: 2px solid var(--white);
 }
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
   .header {
-    padding: 0.75rem 1.5rem;
-    height: 85px;
+    padding: 0 1.5rem;
+    height: 60px;
+  }
+
+  .logo {
+    height: 60px;
+    width: 100px;
   }
 
   .header-middle {
     padding: 0 1rem;
   }
 
-  .header-middle h2 {
+  .header-title {
     font-size: 18px;
   }
 
+  .header-subtitle {
+    font-size: 12px;
+  }
+
   .navbar {
-    top: 85px;
+    top: 60px;
     padding: 0 1.5rem;
+    height: 42px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .header {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0.75rem 1.25rem;
-    height: auto;
-  }
-
-  .header-left,
-  .header-right {
-    flex: none;
-    width: 100%;
-  }
-
-  .header-right {
-    justify-content: space-between;
-  }
-
-  .navbar {
-    top: 140px;
-    padding: 0 1.25rem;
+    padding: 0 1rem;
     height: 60px;
   }
 
-  .nav-links {
-    gap: 15px;
-    flex-wrap: wrap;
+  .header-left {
+    gap: 0.75rem;
   }
 
-  .nav-link {
+  .logo {
+    height: 60px;
+    width: 80px;
+  }
+
+  .company-name {
     font-size: 16px;
   }
 
-  .divider {
-    height: 25px;
+  .company-tagline {
+    font-size: 10px;
   }
 
-  .header-middle h2 {
+  .header-middle {
+    padding: 0 0.5rem;
+  }
+
+  .header-title {
     font-size: 16px;
+  }
+
+  .header-subtitle {
+    font-size: 11px;
+  }
+
+  .header-right {
+    gap: 1rem;
   }
 
   .contact-info {
     font-size: 10px;
   }
+
+  .contact-info strong {
+    font-size: 11px;
+  }
+
+  .navbar {
+    top: 60px;
+    padding: 0 1rem;
+    height: 42px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 0 6px;
+  }
+
+  .divider {
+    height: 22px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .header {
-    padding: 0.75rem 1rem;
-    height: auto;
-  }
-
-  .header-left,
-  .header-right {
-    width: 100%;
+    padding: 0 0.75rem;
+    height: 60px;
   }
 
   .logo {
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
+    height: 60px;
+    width: 70px;
   }
 
-  .company-name {
+  .company-info {
+    display: none; /* Hide company info on very small screens */
+  }
+
+  .header-middle {
+    flex: 1;
+    text-align: center;
+  }
+
+  .header-title {
     font-size: 14px;
   }
 
-  .company-tagline {
-    font-size: 9px;
+  .header-subtitle {
+    font-size: 10px;
   }
 
-  .header-middle h2 {
-    font-size: 13px;
+  .contact-info {
+    display: none; /* Hide contact info on very small screens */
   }
 
   .navbar {
-    top: 120px;
-    padding: 0 1rem;
-    height: 55px;
-    border-bottom-right-radius: 15px;
+    top: 60px;
+    padding: 0 0.75rem;
+    height: 42px;
   }
 
   .nav-links {
-    gap: 12px;
-    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .nav-link {
-    font-size: 14px;
+    font-size: 12px;
     padding: 0 4px;
   }
 
   .divider {
-    height: 20px;
+    height: 18px;
     width: 0.5px;
-  }
-
-  .contact-info {
-    font-size: 9px;
-  }
-
-  .notification-icon {
-    font-size: 18px;
   }
 }
 

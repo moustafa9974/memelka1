@@ -3,12 +3,12 @@
   --primary-blue: #0066cc;
   --primary-blue-dark: #0052a3;
   --primary-blue-darker: #003d7a;
-  --light-blue: #e6f2ff;
+  --light-blue: #ffffff;
   --white: #ffffff;
   --text-dark: #1e293b;
   --text-light: #64748b;
-  --bg-light: #f8fafc;
-  --border-light: #e2e8f0;
+  --bg-light: #ffffff;
+  --border-light: #ffffff;
 }
 
 :host {
@@ -30,7 +30,7 @@
   text-align: center;
   font-size: 40px;
   font-weight: 700;
-  color: var(--primary-blue);
+  color: var(--primary-blue-darker);
   margin: 0 0 60px 0;
   padding: 40px 0;
   border-bottom: 2px solid var(--light-blue);
@@ -125,20 +125,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 400px;
+  min-height: 1000px;
 }
 
 .image-content {
-  font-size: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 1000px;
   background: linear-gradient(135deg, var(--light-blue) 0%, rgba(0, 102, 204, 0.1) 100%);
   border-radius: 12px;
   border: 2px solid var(--border-light);
   animation: float 3s ease-in-out infinite;
+  padding: 20px;
+}
+
+.company-logo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 @keyframes float {
@@ -161,9 +170,8 @@
   }
 
   .image-content {
-    width: 250px;
-    height: 250px;
-    font-size: 150px;
+    width: 550px;
+    height: 550px;
   }
 }
 
@@ -194,12 +202,12 @@
 
   .about-image {
     min-height: 300px;
+    order: -1; /* Makes image appear first on mobile */
   }
 
   .image-content {
     width: 200px;
     height: 200px;
-    font-size: 120px;
   }
 }
 
@@ -248,8 +256,7 @@
   }
 
   .image-content {
-    width: 150px;
-    height: 150px;
-    font-size: 80px;
+    width: 180px;
+    height: 180px;
   }
 }

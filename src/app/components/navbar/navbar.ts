@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { Subject } from 'rxjs';
+import { filter, takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -7,14 +9,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
   notificationCount = 3;
   activeLink = 'home';
+  private destroy$ = new Subject<void>();
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.updateActiveLink();
+
+    // Listen to route changes
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        takeUntil(this.destroy$)
+      )
+      .subscribe(() => {
+        this.updateActiveLink();
+      });
   }
 
   updateActiveLink(): void {
@@ -32,5 +45,10 @@ export class NavbarComponent implements OnInit {
 
   onNotificationClick(): void {
     alert('📬 You have ' + this.notificationCount + ' new messages from our sales team!');
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

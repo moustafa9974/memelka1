@@ -1,40 +1,156 @@
 <app-navbar></app-navbar>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Welcome to Nature's Delight</h1>
-        <p>Explore our premium collection of agricultural products</p>
+<!-- Hero Section with Full Screen Image - Starts Below Navbar -->
+<section class="hero-section">
+  <div class="hero-image-container" #heroImageContainer>
+    <img
+      src="hero.jpeg"
+      alt="Nature's Delight Hero"
+      class="hero-image"
+      loading="eager"
+    />
+    <div class="hero-overlay"></div>
+  </div>
 
-        <!-- Product Categories List - Clickable Titles Only -->
-        <div class="categories-list">
-            <div *ngFor="let category of productCategories"
-                 class="category-item"
-                 (click)="navigateToProducts(category.categoryName)">
-                <div class="category-info">
-                    <h3 class="category-name">{{ category.categoryName }}</h3>
-                    <p class="category-count">{{ category.products.length }} products</p>
-                </div>
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
+  <div class="hero-content" #heroContent>
+    <div class="hero-text-wrapper">
+      <h1 class="hero-title">Welcome to Memelka For Exports</h1>
+      <div class="gold-divider"></div>
+      <p class="hero-subtitle">Premium agricultural products delivered to your door</p>
+      <button class="btn btn-gold" (click)="navigateToProducts()">
+        <span>Explore Products</span>
+        <span class="arrow">→</span>
+      </button>
     </div>
+  </div>
 
-    <div class="hero-images">
-        <div class="hero-image-item" (click)="navigateToProducts()">
-            <img src="Medjool Dates Punnet 450g.jpeg" alt="Dates" class="product-image" />
-            <span class="image-label">Dates</span>
-        </div>
-        <div class="hero-image-item" (click)="navigateToProducts()">
-            <img src="Chilli.jpeg" alt="Spices" class="product-image" />
-            <span class="image-label">Spices</span>
-        </div>
-        <div class="hero-image-item" (click)="navigateToProducts()">
-            <img src="WhiteBean.jpeg" alt="Beans" class="product-image" />
-            <span class="image-label">Beans</span>
-        </div>
-        <div class="hero-image-item" (click)="navigateToProducts()">
-            <img src="Yellow_potato.jpeg" alt="Fresh Produce" class="product-image" />
-            <span class="image-label">Fresh</span>
-        </div>
-    </div>
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <span class="scroll-text">Scroll to explore</span>
+    <div class="scroll-line"></div>
+  </div>
 </section>
+
+<main class="home-main">
+  <!-- Categories & Products Section -->
+  <section class="categories-section" #categoriesSection>
+    <div class="container">
+      <div class="section-header">
+        <h2>Browse by Category</h2>
+        <div class="gold-divider"></div>
+        <p>Explore our premium collection of agricultural products</p>
+      </div>
+
+      <div class="categories-grid">
+        <div
+          *ngFor="let category of productCategories"
+          class="category-card"
+          (click)="navigateToProducts(category.categoryName)"
+          role="button"
+          tabindex="0"
+        >
+          <div class="category-icon-large">{{ category.categoryIcon }}</div>
+          <h3 class="category-name">{{ category.categoryName }}</h3>
+          <p class="category-count">{{ category.products.length }} items</p>
+          <div class="category-arrow">›</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="featured-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Products</h2>
+        <div class="gold-divider"></div>
+        <p>Discover our most popular items</p>
+      </div>
+
+      <div class="products-grid">
+        <div
+          class="product-card"
+          *ngFor="let category of productCategories | slice:0:4"
+          (click)="navigateToProducts(category.categoryName)"
+        >
+          <div class="product-image-wrapper">
+            <img
+              [src]=" category.products[0].image"
+              [alt]="category.products[0].name"
+              class="product-image"
+              loading="lazy"
+            />
+            <div class="product-overlay">
+              <button class="btn btn-gold-small">View Details</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h4>{{ category.products[0].name }}</h4>
+            <p>{{ category.products[0].description }}</p>
+            <span class="badge">{{ category.products[0].badge }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Contact Information Section -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-header">
+      <h2>Contact Information</h2>
+      <p>Get in touch with us for inquiries, quotes, or partnerships</p>
+    </div>
+
+    <div class="contact-info-grid">
+      <!-- Phone -->
+      <div class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <h3>Phone Numbers</h3>
+        <a href="tel:+201234567890" class="contact-detail">+20 123 456 7890</a>
+        <a href="tel:+209876543210" class="contact-detail">+20 987 654 3210</a>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-card">
+        <div class="contact-card-icon">✉️</div>
+        <h3>Email Address</h3>
+        <a href="mailto:info@memelkaexport.com" class="contact-detail">info@memelkaexport.com</a>
+        <a href="mailto:sales@memelkaexport.com" class="contact-detail">sales@memelkaexport.com</a>
+      </div>
+
+      <!-- Location -->
+      <div class="contact-card">
+        <div class="contact-card-icon">📍</div>
+        <h3>Office Address</h3>
+        <span class="contact-detail">123 Agriculture Street</span>
+        <span class="contact-detail">Export Business District</span>
+        <span class="contact-detail">Cairo, Egypt</span>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="image-wrapper">
+            <img
+              src="logo1.jpg"
+              alt="Nature's Delight"
+              loading="lazy"
+            />
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+        <div class="about-content">
+          <h2>About Memelka For Export</h2>
+          <div class="gold-divider-left"></div>
+          <p>We bring premium agricultural products directly from trusted farms to your doorstep. With a commitment to quality and sustainability, every product is carefully selected to meet the highest standards.</p>
+          <p>From fresh produce to specialty spices, our collection represents the finest that nature has to offer.</p>
+          <button class="btn btn-outline-gold" (click)="navigateToAbout()">Explore More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
