@@ -274,6 +274,44 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
           image: 'download (4).jpeg'
         }
       ]
+    },
+    {
+      categoryName: 'Chemicals',
+      categoryIcon: '⚗️',
+      products: [
+        {
+          id: 'chem-lldpe-1',
+          name: 'LLDPE Film - Butene 1801 AAB',
+          description: 'Heavy duty bags, liners, blends',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'LLDPE'
+        },
+        {
+          id: 'chem-hdpe-inj-1',
+          name: 'HDPE Injection Molding EM-5204-UVH',
+          description: 'Caps and Closures, Pails, Industrial Containers (UV stabilized)',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        },
+        {
+          id: 'chem-mdpe-roto-1',
+          name: 'MDPE RotoMolding EM-3405-UVH',
+          description: 'UV stabilized Applications like water tanks',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'MDPE'
+        },
+        {
+          id: 'chem-hdpe-film-1',
+          name: 'HDPE Film EE-4811-AAH',
+          description: 'High strength film, Grocery bags, Multiwall bag liner, Heavy duty bags',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        }
+      ]
     }
   ];
 

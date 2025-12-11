@@ -201,6 +201,165 @@ export class ProductsPageComponent implements OnInit {
           category: 'Fresh',
           badge: 'Fresh',
           image: 'Yellow_potato.jpeg'
+        },
+        {
+          id: 'fresh-4',
+          name: 'Oranges',
+          description: 'Fresh, juicy oranges. Rich in vitamin C and natural sweetness.',
+          icon: '🍊',
+          category: 'Fresh',
+          badge: 'Fresh',
+          image: 'Orange.jpeg'
+        }
+      ]
+    },
+    {
+      categoryName: 'Chemicals',
+      categoryIcon: '⚗️',
+      products: [
+        {
+          id: 'chem-lldpe-1',
+          name: 'LLDPE Film - Butene 1801 AAB',
+          description: 'Heavy duty bags, liners, blends',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'LLDPE'
+        },
+        {
+          id: 'chem-lldpe-2',
+          name: 'LLDPE Film - Butene 1801 BSB',
+          description: 'Heavy duty bags, liners, blends with slip & anti-block additives',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'LLDPE'
+        },
+        {
+          id: 'chem-lldpe-3',
+          name: 'LLDPE Film - Butene 1802 AAB',
+          description: 'Light duty bags, liners, blends',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'LLDPE'
+        },
+        {
+          id: 'chem-lldpe-4',
+          name: 'LLDPE Film - Butene 1802 BSB',
+          description: 'Light duty bags, liners, blends with slip & anti-block additives',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'LLDPE'
+        },
+        {
+          id: 'chem-hdpe-inj-1',
+          name: 'HDPE Injection Molding EM-5204-UVH',
+          description: 'Caps and Closures, Pails, Industrial Containers (UV stabilized)',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        },
+        {
+          id: 'chem-mdpe-roto-1',
+          name: 'MDPE RotoMolding EM-3405-UVH',
+          description: 'UV stabilized Applications like water tanks',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'MDPE'
+        },
+        {
+          id: 'chem-hdpe-mono-1',
+          name: 'HDPE Monofilament EE-5001-UVH',
+          description: 'Fishnets, ropes, wovens with process aid additives',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        },
+        {
+          id: 'chem-mdpe-film-1',
+          name: 'MDPE Film EE-3914-AAH',
+          description: 'Industrial liners, Mailer bags, Notion bags, Blends',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'MDPE'
+        },
+        {
+          id: 'chem-hdpe-film-1',
+          name: 'HDPE Film EE-4811-AAH',
+          description: 'High strength film, Grocery bags, Multiwall bag liner, Heavy duty bags',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        },
+        {
+          id: 'chem-hdpe-blow-1',
+          name: 'HDPE Blow Molding EM-5333-AAH',
+          description: 'HIC bottles less than 5 liters',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        },
+        {
+          id: 'chem-hdpe-blow-2',
+          name: 'HDPE Blow Molding EM-4925-AAH',
+          description: 'HIC bottles High ESCR',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        },
+        {
+          id: 'chem-hdpe-blow-3',
+          name: 'HDPE Blow Molding EM-4810-AAH',
+          description: 'Large Part Blow Molding up to 500 liters',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        },
+        {
+          id: 'chem-hdpe-film-2',
+          name: 'HDPE Film HD 5301 FB',
+          description: 'Low gel film grade - High strength film, Grocery bags, Multiwall bag liner, Heavy duty bags',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        },
+        {
+          id: 'chem-hdpe-blow-4',
+          name: 'HDPE Blow Molding HDPE 5502 GA',
+          description: 'HIC bottles High ESCR',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        },
+        {
+          id: 'chem-hdpe-blow-5',
+          name: 'HDPE Blow Molding HDPE 5301 EA',
+          description: 'Large Part Blow Molding',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        },
+        {
+          id: 'chem-hdpe-roto-1',
+          name: 'HDPE Rotational Molding HD 3840 UA',
+          description: 'Rotational moulded items like tanks, containers, Injection moulded technical parts and closure',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        },
+        {
+          id: 'chem-hdpe-inj-1',
+          name: 'HDPE Injection Molding HDPE 6070',
+          description: 'Crates, Boxes, Seats, Pallets',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
+        },
+        {
+          id: 'chem-hdpe-inj-2',
+          name: 'HDPE Injection Molding HDPE 5740',
+          description: 'Large dustbins, pails, pallets, boxes, fish crates, technical moulding',
+          icon: '🧴',
+          category: 'Chemicals',
+          badge: 'HDPE'
         }
       ]
     },
@@ -228,12 +387,12 @@ export class ProductsPageComponent implements OnInit {
         },
         {
           id: 'industrial-3',
-          name: 'Fertilizers',
-          description: 'Complete range of fertilizers for all crop types.',
+          name: 'Phosphate',
+          description: 'High-quality phosphate for agricultural and industrial applications. Essential mineral nutrient for crop growth and soil enrichment.',
           icon: '🌾',
           category: 'Industrial',
-          badge: 'Fertilizer',
-          image: 'Pile of soil.jpeg'
+          badge: 'Phosphate',
+          image: 'Phosphate.jpeg'
         }
       ]
     },

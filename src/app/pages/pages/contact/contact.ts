@@ -27,7 +27,7 @@ export class ContactComponent {
     {
       icon: '📧',
       title: 'Email',
-      content: 'office@orienteg.com'
+      content: 'office@memelka.com'
     },
     {
       icon: '📍',
